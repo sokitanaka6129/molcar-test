@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>モルカー再生停止テスト</title>
+  <style>
+    body {
+      background-color: #fdfdfd;
+      text-align: center;
+      font-family: sans-serif;
+      padding-top: 40px;
+    }
+    video {
+      max-width: 90%;
+      cursor: pointer;
+      border: 2px solid #ccc;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body>
+  <h2>クリック / タップで 一時停止 ⇄ 再生</h2>
+  <video id="molcarVideo" autoplay loop muted playsinline>
+    <source src="v2_PUIPUIモルカー.mp4" type="video/mp4">
+    お使いのブラウザはvideoタグに対応していません。
+  </video>
+
+  <script>
+    const video = document.getElementById("molcarVideo");
+    video.addEventListener("click", () => {
+      video.paused ? video.play() : video.pause();
+    });
+  </script>
+</body>
+</html>
